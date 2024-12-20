@@ -1,0 +1,9 @@
+accelerate==0.33.0
+diffusers==0.31.0
+fastapi[standard]==0.115.4
+huggingface-hub[hf_transfer]==0.25.2
+sentencepiece==0.2.0
+torch==2.5.1
+torchvision==0.20.1
+transformers~=4.44.0
+modal==0.42.0
