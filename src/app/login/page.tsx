@@ -67,6 +67,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { loginWithEmail } from "@/lib/firebaseAuth";
+import Image from "next/image";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -87,11 +88,14 @@ export default function Login() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
       <div className="logo-container flex flex-col items-center mt-4 mb-6">
-        <img
+        <Image
           src="/camera-logo.png"
           alt="Camera Logo"
-          className="w-16 h-16 mb-2"
+          width={64} // Explicit width
+          height={64} // Explicit height
+          className="mb-2"
         />
+
         <h1 className="text-5xl font-bold text-white">Pentagram</h1>
       </div>
       <div className="wrapper">

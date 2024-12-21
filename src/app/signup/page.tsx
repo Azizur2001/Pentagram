@@ -344,6 +344,7 @@ import { registerWithEmail } from "@/lib/firebaseAuth";
 import { doc, setDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "@/lib/firebaseConfig";
 import { User } from "firebase/auth"; // Import User type from Firebase Auth
+import Image from "next/image";
 
 // Function to add a user to Firestore
 const addUserToFirestore = async (user: User, displayName: string) => {
@@ -390,11 +391,14 @@ export default function SignUp() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-900">
       <div className="logo-container flex flex-col items-center mt-4 mb-6">
-        <img
+        <Image
           src="/camera-logo.png"
           alt="Camera Logo"
-          className="w-16 h-16 mb-2"
+          width={64} // Explicit width
+          height={64} // Explicit height
+          className="mb-2"
         />
+
         <h1 className="text-5xl font-bold text-white">Pentagram</h1>
       </div>
 
