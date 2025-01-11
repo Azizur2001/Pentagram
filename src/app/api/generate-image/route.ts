@@ -2,7 +2,6 @@ import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   try {
-    // Parse the incoming request body to get the `text` parameter
     const { text } = await request.json();
 
     console.log("Prompt received:", text);
@@ -44,6 +43,6 @@ export async function POST(request: Request) {
     return NextResponse.json(
       { success: false, error: "Failed to fetch image from Modal API" },
       { status: 500 }
-    );
+    ); 
   }
 }
